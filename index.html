@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuvuy — Prospecção Automatizada & Qualificação de Leads com IA</title>
+  
+  <!-- Meta & SEO Tags -->
+  <meta name="description" content="O Nuvuy coleta dados do Google Maps via Places API, analisa a presença digital com IA (OpenRouter) e pontua leads automaticamente em Quente, Morno e Frio em um Kanban futurista monocromático.">
+  <meta name="keywords" content="nuvuy, prospecção de leads, qualificação com ia, google places api, scraper de clientes, kanban de vendas, prospecção b2b">
+  <meta name="author" content="Nuvuy SaaS">
+  <meta property="og:title" content="Nuvuy — Prospecção & Qualificação de Leads por IA">
+  <meta property="og:description" content="Transforme dados brutos do Google Maps em clientes de alto valor com classificação automática por IA.">
+  <meta property="og:type" content="website">
+
+  <!-- Spline 3D Viewer Script -->
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.98/build/spline-viewer.js"></script>
+
+  <!-- Stylesheet with Cache Buster -->
+  <link rel="stylesheet" href="styles.css?v=pure_monochrome_v1">
+</head>
+<body>
+
+  <!-- CAKTO FX 1: Global Mouse Cursor Spotlight Layer -->
+  <div id="cursor-spotlight" aria-hidden="true"></div>
+
+  <!-- Ambient Monochrome Glow Blobs -->
+  <div class="ambient-glow-container" aria-hidden="true">
+    <div class="glow-blob glow-blob-1"></div>
+    <div class="glow-blob glow-blob-2"></div>
+    <div class="glow-blob glow-blob-3"></div>
+  </div>
+  <div class="bg-grid-pattern" aria-hidden="true"></div>
+
+  <!-- Floating Navbar -->
+  <div class="navbar-wrapper">
+    <nav class="navbar" id="main-nav">
+      <a href="#" class="nav-brand" aria-label="Nuvuy Home">
+        <img src="assets/logo.svg" alt="Nuvuy Logo" width="165" height="42" style="height: 36px; width: auto;">
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#recursos">Recursos</a></li>
+        <li><a href="#demo">Demonstração</a></li>
+        <li><a href="#como-funciona">Como Funciona</a></li>
+        <li><a href="#planos">Planos</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#demo" class="btn btn-glass btn-sm">Entrar</a>
+        <a href="#planos" class="btn btn-primary btn-sm">Começar Agora</a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <!-- Hero Background Video Layer -->
+    <div class="hero-video-bg" aria-hidden="true">
+      <video class="hero-video-element" autoplay loop muted playsinline preload="auto">
+        <source src="assets/VIDEO-DA-HERO-DA-PAGINA_1.webm" type="video/webm">
+      </video>
+      <div class="hero-video-overlay"></div>
+    </div>
+
+    <!-- Floating Node Cards (Grayscale SVG Icons) -->
+    <div class="hero-floating-nodes" aria-hidden="true">
+      <div class="floating-node floating-node-1">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>
+        <span>Lead Quente — Score 94</span>
+      </div>
+      <div class="floating-node floating-node-2">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Google Places Scraper</span>
+      </div>
+      <div class="floating-node floating-node-3">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/></svg>
+        <span>OpenRouter IA Engine</span>
+      </div>
+      <div class="floating-node floating-node-4">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <span>Roteiros de Vendas Prontos</span>
+      </div>
+    </div>
+
+    <div class="container hero-content">
+      <div class="badge-pill stagger-badge">
+        <span class="pulse-dot"></span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg>
+        <span>INTELIGÊNCIA ARTIFICIAL DE PROSPECÇÃO B2B</span>
+      </div>
+
+      <!-- Hero Title with Staggered Word Reveal -->
+      <h1 class="hero-title-stagger">
+        Encontre Clientes Prontos para Comprar & <br>
+        <span>Automatize sua Prospecção no Google Maps</span>
+      </h1>
+
+      <p class="hero-subtitle hero-subtitle-stagger">
+        Chega de perder horas buscando leads manualmente. O <strong>Nuvuy</strong> escaneia estabelecimentos locais, analisa a presença digital com IA e entrega uma lista priorizada com <strong>Leads Quentes (71–100)</strong> e <strong>Roteiros de Vendas Prontos</strong> para você fechar mais contratos.
+      </p>
+
+      <div class="hero-actions hero-actions-stagger">
+        <a href="#demo" class="btn btn-primary btn-lg">
+          Gerar Leads com IA Agora
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#recursos" class="btn btn-glass btn-lg">
+          Ver Demonstração Prática
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- CAKTO FX: Seamless Infinite Marquee Ticker -->
+    <div class="partners-bar reveal">
+      <p class="partners-title">INTEGRADO COM AS PRINCIPAIS PLATAFORMAS</p>
+      <div class="marquee-container">
+        <div class="marquee-track">
+          <div class="partner-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Google Places API
+          </div>
+          <div class="partner-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/></svg>
+            OpenRouter LLMs
+          </div>
+          <div class="partner-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            Supabase DB
+          </div>
+          <div class="partner-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            Instagram Analytics
+          </div>
+          <div class="partner-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            Vercel & Render Cloud
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Bento Grid Section with Right Side Interactive Spline 3D Viewer -->
+  <section class="section" id="recursos">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">RECURSOS EXCLUSIVOS</div>
+        <h2 class="section-title">Tecnologia de Prospecção sem Achismos</h2>
+        <p class="section-description">
+          Chega de abrir site por site e tentar adivinhar se o cliente precisa do seu serviço. O Nuvuy faz a varredura completa em segundos.
+        </p>
+      </div>
+
+      <!-- Split Layout Container (Left Info Cards / Right Spline 3D Scene) -->
+      <div class="features-split-container">
+        
+        <!-- Left Side: Information & Feature Cards -->
+        <div class="left-bento-column">
+          
+          <!-- Card 1: Motor IA & Meter -->
+          <div class="bento-card reveal reveal-delay-1">
+            <div>
+              <div class="card-header-badge">
+                <span class="badge-tag">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                  MOTOR DE INTELIGÊNCIA ARTIFICIAL
+                </span>
+                <span style="color: var(--text-muted); font-size: 0.8rem; font-weight: 600;">Processamento Síncrono</span>
+              </div>
+              <h3 class="card-title">Precisão na Qualificação de Leads</h3>
+              <p class="card-desc">
+                Algoritmo exclusivo que cruza avaliações do Google Maps, existência de site, responsividade móvel e dados de redes sociais para gerar um Score exato.
+              </p>
+              <div class="big-stat-display">
+                <span class="stat-number" data-count="98.2" data-decimals="1" data-suffix="%">0.0%</span>
+                <span class="stat-unit">Assertividade na identificação de gargalos digitais</span>
+              </div>
+            </div>
+
+            <!-- Progress Meters Component -->
+            <div class="stat-meter-container">
+              <div class="meter-track-item">
+                <div class="meter-label-row">
+                  <span style="display: inline-flex; align-items: center; gap: 8px;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 17c1.38 0 2.5-1.12 2.5-2.5 0-.64-.24-1.23-.64-1.67L12 11.5l-.86 1.33c-.4.44-.64 1.03-.64 1.67z"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z"/></svg>
+                    Leads Quentes (Score 71–100)
+                  </span>
+                  <span class="meter-percentage">98.2%</span>
+                </div>
+                <div class="meter-bar-bg">
+                  <div class="meter-bar-fill" style="width: 98%;"></div>
+                </div>
+              </div>
+
+              <div class="meter-track-item">
+                <div class="meter-label-row">
+                  <span style="display: inline-flex; align-items: center; gap: 8px;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    Leads Mornos (Score 41–70)
+                  </span>
+                  <span class="meter-percentage">94.5%</span>
+                </div>
+                <div class="meter-bar-bg">
+                  <div class="meter-bar-fill" style="width: 94.5%; background: linear-gradient(90deg, #3f3f46 0%, #a1a1aa 100%);"></div>
+                </div>
+              </div>
+
+              <div class="meter-track-item">
+                <div class="meter-label-row">
+                  <span style="display: inline-flex; align-items: center; gap: 8px;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14"/></svg>
+                    Leads Frios (Score 0–40)
+                  </span>
+                  <span class="meter-percentage">99.1%</span>
+                </div>
+                <div class="meter-bar-bg">
+                  <div class="meter-bar-fill" style="width: 99.1%; background: linear-gradient(90deg, #27272a 0%, #71717a 100%);"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: High-End Kanban Board Component -->
+          <div class="bento-card reveal reveal-delay-2">
+            <div>
+              <div class="card-header-badge">
+                <span class="badge-tag">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/><path d="M15 3v18"/></svg>
+                  GESTÃO VISUAL
+                </span>
+                <span style="color: var(--text-muted); font-size: 0.8rem; font-weight: 600;">Atualização ao Vivo</span>
+              </div>
+              <h3 class="card-title">Kanban de Vendas</h3>
+              <p class="card-desc">
+                Organização automática dos leads capturados por temperatura de fechamento.
+              </p>
+            </div>
+
+            <!-- macOS Style Kanban Dashboard Window -->
+            <div class="kanban-window">
+              <div class="kanban-window-header">
+                <div class="kanban-window-dots">
+                  <div class="kanban-dot"></div>
+                  <div class="kanban-dot"></div>
+                  <div class="kanban-dot"></div>
+                </div>
+                <div class="kanban-window-title">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/><path d="M15 3v18"/></svg>
+                  KANBAN LIVE FEED
+                </div>
+              </div>
+
+              <div class="kanban-board-body">
+                <!-- Column 1: Quente -->
+                <div class="kanban-column">
+                  <div class="kanban-column-title">
+                    <span style="display: inline-flex; align-items: center; gap: 4px;">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 17c1.38 0 2.5-1.12 2.5-2.5 0-.64-.24-1.23-.64-1.67L12 11.5l-.86 1.33c-.4.44-.64 1.03-.64 1.67z"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z"/></svg>
+                      QUENTE
+                    </span>
+                    <span class="score-chip hot">94 pts</span>
+                  </div>
+                  <div class="kanban-card-item">
+                    <div class="kanban-company-info">
+                      <div class="kanban-avatar-box">BV</div>
+                      <div class="kanban-company-name">Bella Vita</div>
+                    </div>
+                    <div class="kanban-card-row">
+                      <span class="kanban-niche-pill">Estética</span>
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Column 2: Morno -->
+                <div class="kanban-column">
+                  <div class="kanban-column-title">
+                    <span style="display: inline-flex; align-items: center; gap: 4px;">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                      MORNO
+                    </span>
+                    <span class="score-chip warm">68 pts</span>
+                  </div>
+                  <div class="kanban-card-item">
+                    <div class="kanban-company-info">
+                      <div class="kanban-avatar-box">SG</div>
+                      <div class="kanban-company-name">Studio Glow</div>
+                    </div>
+                    <div class="kanban-card-row">
+                      <span class="kanban-niche-pill">Beleza</span>
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Column 3: Frio -->
+                <div class="kanban-column">
+                  <div class="kanban-column-title">
+                    <span style="display: inline-flex; align-items: center; gap: 4px;">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14"/></svg>
+                      FRIO
+                    </span>
+                    <span class="score-chip cold">35 pts</span>
+                  </div>
+                  <div class="kanban-card-item">
+                    <div class="kanban-company-info">
+                      <div class="kanban-avatar-box">DL</div>
+                      <div class="kanban-company-name">Dr. Lucas</div>
+                    </div>
+                    <div class="kanban-card-row">
+                      <span class="kanban-niche-pill">Médico</span>
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Redesigned Script Box with Header -->
+          <div class="bento-card reveal reveal-delay-1">
+            <div class="card-header-badge">
+              <span class="badge-tag">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                ABORDAGEM PERSONALIZADA
+              </span>
+            </div>
+            <h3 class="card-title">Roteiros Prontos de Vendas por IA</h3>
+            <p class="card-desc">
+              A IA gera uma mensagem de abordagem atacando a dor exata encontrada no estabelecimento.
+            </p>
+
+            <div class="script-box">
+              <div class="script-card-header">
+                <div class="script-ai-title">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/></svg>
+                  Pitch Recomendado pela IA
+                </div>
+                <button class="copy-btn" onclick="copyScript(this, 'Olá! Vi que vocês têm 4.8 no Google Maps, mas o site de vocês está fora do ar. Posso enviar um modelo de página rápida para dobrar agendamentos?')">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                  Copiar
+                </button>
+              </div>
+              <div class="script-box-text">
+                "Olá! Vi que vocês têm 4.8 no Google Maps, mas o site está fora do ar. Posso enviar um modelo de página rápida para dobrar agendamentos?"
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Redesigned Extraction Cards -->
+          <div class="bento-card reveal reveal-delay-2">
+            <div class="card-header-badge">
+              <span class="badge-tag">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                SCRAPING DIRETO DO GOOGLE MAPS
+              </span>
+            </div>
+            <h3 class="card-title">Extração Completa de Dados Reais</h3>
+            <p class="card-desc">
+              Obtenha telefone direto, endereço completo, quantidade de avaliações, nota média e website em 1 clique.
+            </p>
+
+            <div class="metric-grid-compact">
+              <div class="metric-card-box">
+                <div class="metric-card-title">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  DADOS EXTRAÍDOS
+                </div>
+                <div class="metric-card-value">Nome, Telefone, Site & Redes</div>
+              </div>
+
+              <div class="metric-card-box">
+                <div class="metric-card-title">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                  TEMPO MÉDIO
+                </div>
+                <div class="metric-card-value">&lt; 2.8s (API Síncrona)</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Side: INTERACTIVE SPLINE 3D SCENE -->
+        <div class="right-video-column reveal reveal-delay-2">
+          <div class="spline-container">
+            <spline-viewer url="https://prod.spline.design/yNbk7T2VlFU2rVSI/scene.splinecode"></spline-viewer>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Simulator Section -->
+  <section class="section" id="demo" style="background: rgba(5, 5, 5, 0.8); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">TESTE AGORA</div>
+        <h2 class="section-title">Simulador de Prospecção ao Vivo</h2>
+        <p class="section-description">
+          Selecione o nicho e a cidade desejada para ver a inteligência do Nuvuy em ação.
+        </p>
+      </div>
+
+      <div class="simulator-container reveal reveal-delay-1">
+        <form id="sim-form">
+          <div class="sim-form-row">
+            <div class="sim-field">
+              <label for="sim-niche">Nicho de Mercado:</label>
+              <select id="sim-niche" class="sim-select">
+                <option value="estetica">Clínicas de Estética & Beleza</option>
+                <option value="restaurante">Restaurantes & Hamburguerias</option>
+                <option value="academia">Academias & Crossfit</option>
+              </select>
+            </div>
+
+            <div class="sim-field">
+              <label for="sim-city">Região / Cidade:</label>
+              <input type="text" id="sim-city" class="sim-input" value="São Paulo, SP" placeholder="Ex: Rio de Janeiro, RJ">
+            </div>
+
+            <div class="sim-field" style="justify-content: flex-end;">
+              <button type="submit" class="btn btn-primary btn-lg" style="height: 46px;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                Simular Busca com IA
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <div class="sim-results-box">
+          <div id="sim-placeholder" class="sim-placeholder-state">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin-bottom: 12px; opacity: 0.4;"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <p>Selecione os parâmetros e clique em <strong>"Simular Busca com IA"</strong>.</p>
+          </div>
+
+          <div id="sim-loading" class="sim-loading-state">
+            <div class="spinner"></div>
+            <p style="color: #ffffff; font-weight: 600;">Extraindo empresas no Google Maps & Qualificando com IA...</p>
+          </div>
+
+          <div id="sim-results" class="sim-lead-results">
+            <!-- Populated via script.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="section" id="como-funciona">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">PASSO A PASSO</div>
+        <h2 class="section-title">Como Funciona o Nuvuy</h2>
+        <p class="section-description">
+          Da configuração da busca ao contrato assinado.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card reveal reveal-delay-1">
+          <div class="feature-icon-wrapper">01</div>
+          <h3 class="feature-title">Parâmetros de Busca</h3>
+          <p class="feature-desc">
+            Defina a cidade e a categoria de estabelecimentos que deseja prospeccionar.
+          </p>
+        </div>
+
+        <div class="feature-card reveal reveal-delay-2">
+          <div class="feature-icon-wrapper">02</div>
+          <h3 class="feature-title">Varredura & Scraping</h3>
+          <p class="feature-desc">
+            O robô busca estabelecimentos no Google Maps e extrai telefone, endereço, site e avaliações.
+          </p>
+        </div>
+
+        <div class="feature-card reveal reveal-delay-1">
+          <div class="feature-icon-wrapper">03</div>
+          <h3 class="feature-title">Qualificação via IA</h3>
+          <p class="feature-desc">
+            O OpenRouter calcula o Nuvuy Score (0 a 100) identificando se o lead é Quente, Morno ou Frio.
+          </p>
+        </div>
+
+        <div class="feature-card reveal reveal-delay-2">
+          <div class="feature-icon-wrapper">04</div>
+          <h3 class="feature-title">Envio do Pitch</h3>
+          <p class="feature-desc">
+            Copie a mensagem de abordagem personalizada gerada pela IA e envie diretamente no WhatsApp.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STRICT MONOCHROME 4-COLUMN PRICING PLANS SECTION -->
+  <section class="section" id="planos">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title">Planos de Assinatura</h2>
+        <p class="section-description">
+          Escolha o plano ideal para alavancar sua captação de clientes
+        </p>
+      </div>
+
+      <!-- Pricing Toggle -->
+      <div class="pricing-toggle-container reveal reveal-delay-1">
+        <span class="toggle-label active" id="label-monthly">Mensal</span>
+        <div class="toggle-switch" id="pricing-toggle">
+          <div class="toggle-knob"></div>
+        </div>
+        <span class="toggle-label" id="label-annual">Anual</span>
+        <span class="discount-tag">20% OFF</span>
+      </div>
+
+      <!-- 4 STRICT MONOCHROME PRICING CARDS -->
+      <div class="pricing-grid">
+        
+        <!-- PLAN 1: GRATUITO -->
+        <div class="pricing-card current-plan-card reveal reveal-delay-1">
+          <div>
+            <h3 class="plan-name">Gratuito</h3>
+            <p class="plan-desc">Teste a plataforma e conheça o poder da prospecção inteligente.</p>
+            <div class="plan-price-box">
+              <span class="plan-currency">R$</span>
+              <span class="plan-price">0</span>
+              <span class="plan-period">/mês</span>
+            </div>
+
+            <ul class="plan-features">
+              <li><svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <strong>50 leads/mês</strong></li>
+              <li><svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <strong>5 leads por tarefa</strong></li>
+              <li><svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <strong>Sem limite de tarefas</strong></li>
+              <li><svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Classificação IA básica</li>
+              <li><svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Avaliação básica do lead</li>
+              <li><svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Roteiro de abordagem básico</li>
+              <li><svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Exportação em Excel</li>
+              <li class="disabled-feature"><svg class="cross-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> Busca no Instagram</li>
+              <li class="disabled-feature"><svg class="cross-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> Suporte prioritário</li>
+            </ul>
+          </div>
+          <a href="#demo" class="btn btn-glass" style="width: 100%; border-color: rgba(255, 255, 255, 0.4); color: #ffffff;">Plano Atual</a>
+        </div>
+
+        <!-- PLAN 2: BÁSICO -->
+        <div class="pricing-card reveal reveal-delay-2">
+          <div>
+            <h3 class="plan-name">Básico</h3>
+            <p class="plan-desc">Para freelancers que querem profissionalizar a prospecção.</p>
+            <div class="plan-price-box">
+              <span class="plan-currency">R$</span>
+              <span class="plan-price" id="price-basic">49</span>
+              <span class="plan-period">/mês</span>
+            </div>
+
+            <ul class="plan-features">
+              <li><svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <strong>200 leads/mês</strong></li>
+              <li><svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <strong>10 leads por tarefa</strong></li>
+              <li><svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <strong>Sem limite de tarefas</strong></li>
+              <li class="highlight-pill"><svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Busca no Instagram</li>
+              <li><svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Classificação IA avançada</li>
+              <li><svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Avaliação detalhada do lead</li>
+              <li><svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Roteiro de prospecção detalhado</li>
+              <li><svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Exportação em PDF</li>
+              <li><svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Suporte WhatsApp em até <strong>24h</strong></li>
+            </ul>
+          </div>
+          <a href="#demo" class="btn btn-glass" style="width: 100%;">Fazer Upgrade</a>
+        </div>
+
+        <!-- PLAN 3: PRO (FEATURED / MAIS POPULAR - MONOCHROME WHITE) -->
+        <div class="pricing-card featured reveal reveal-delay-3">
+          <!-- FLOATING UNCLIPPED MONOCHROME WHITE BADGE -->
+          <div class="popular-badge">MAIS POPULAR</div>
+          <div>
+            <h3 class="plan-name">Pro</h3>
+            <p class="plan-desc">A máquina de vendas completa para agências e estúdios.</p>
+            <div class="plan-price-box">
+              <span class="plan-currency">R$</span>
+              <span class="plan-price" id="price-pro">97</span>
+              <span class="plan-period">/mês</span>
+            </div>
+
+            <ul class="plan-features">
+              <li><svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <strong>600 leads/mês</strong></li>
+              <li><svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <strong>20 leads por tarefa</strong></li>
+              <li><svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <strong>Sem limite de tarefas</strong></li>
+              <li><svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Classificação IA <strong>premium</strong></li>
+              <li class="highlight-pill"><svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Comparativo com concorrência</li>
+              <li><svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Roteiro de prospecção <strong>premium</strong></li>
+              <li><svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Exportação completa <strong>(Excel + PDF)</strong></li>
+              <li><svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Suporte WhatsApp prioritário <strong>4h</strong></li>
+              <li><svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Histórico completo de capturas</li>
+            </ul>
+          </div>
+          <a href="#demo" class="btn btn-primary" style="width: 100%;">Fazer Upgrade</a>
+        </div>
+
+        <!-- PLAN 4: BUSINESS -->
+        <div class="pricing-card reveal reveal-delay-4">
+          <div>
+            <h3 class="plan-name">Business</h3>
+            <p class="plan-desc">Solução completa para empresas com prospecção em larga escala.</p>
+            <div class="plan-price-box">
+              <span class="plan-currency">R$</span>
+              <span class="plan-price" id="price-business">149</span>
+              <span class="plan-period">/mês</span>
+            </div>
+
+            <ul class="plan-features">
+              <li><svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <strong>1000 leads/mês</strong></li>
+              <li><svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <strong>30 leads por tarefa</strong></li>
+              <li><svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <strong>Sem limite de tarefas</strong></li>
+              <li class="highlight-pill"><svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Estratégia personalizada por lead</li>
+              <li class="highlight-pill"><svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Relatório executivo de desempenho</li>
+              <li class="highlight-pill"><svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Script de vendas personalizado</li>
+              <li><svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Exportação completa <strong>(Excel + PDF + CSV)</strong></li>
+              <li><svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Métricas Google Maps avançadas</li>
+              <li><svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Suporte <strong>VIP 24h</strong> via WhatsApp direto</li>
+              <li><svg class="check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Até <strong>3 usuários</strong> na conta</li>
+            </ul>
+          </div>
+          <a href="#demo" class="btn btn-glass" style="width: 100%;">Fazer Upgrade</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">DUVIDAS</div>
+        <h2 class="section-title">Perguntas Frequentes</h2>
+        <p class="section-description">
+          Tire suas dúvidas sobre o Nuvuy.
+        </p>
+      </div>
+
+      <div class="faq-container reveal reveal-delay-1">
+        <div class="faq-item active">
+          <button class="faq-question">
+            <span>De onde vêm os dados dos leads capturados?</span>
+            <span class="faq-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            Os dados são extraídos diretamente do Google Maps via Places API oficial, garantindo dados reais e atualizados como nome do estabelecimento, telefone, endereço, nota média, quantidade de avaliações e site oficial.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Como funciona a pontuação por IA (Nuvuy Score)?</span>
+            <span class="faq-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            Nossa IA integrada via OpenRouter analisa múltiplos fatores da presença digital do lead. Se a empresa tem alta nota no Maps mas não possui site, ou tem um site antigo sem adaptação móvel, a IA identifica uma vulnerabilidade e atribui uma nota alta (Lead Quente 71–100).
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>O que são os créditos de prospecção?</span>
+            <span class="faq-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            Cada busca e qualificação individual de lead consome 2 créditos da sua conta. Os planos mensais renovam a franquia de créditos a cada ciclo de cobrança.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Posso exportar a lista de leads para o meu CRM?</span>
+            <span class="faq-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            Sim! Nos planos Pro e Agência, você pode exportar todos os dados dos leads qualificados em formato CSV ou Excel com 1 clique para importar no seu CRM de preferência.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Banner -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-banner reveal">
+        <h2 style="font-family: var(--font-heading); font-size: 2.5rem; margin-bottom: 16px; color: #ffffff;">
+          Pronto para Automatizar sua Prospecção?
+        </h2>
+        <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 32px; font-size: 1.05rem;">
+          Junte-se a freelancers e agências que fecham contratos todos os dias com o Nuvuy.
+        </p>
+        <a href="#demo" class="btn btn-primary btn-lg">
+          Criar Conta Grátis Agora
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/logo.svg" alt="Nuvuy Logo" width="165" height="42" style="height: 36px; width: auto;">
+          <p>
+            Plataforma de prospecção e qualificação automática de leads para prestadores de serviços digitais.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#recursos">Recursos</a></li>
+            <li><a href="#demo">Demonstração</a></li>
+            <li><a href="#como-funciona">Como Funciona</a></li>
+            <li><a href="#planos">Planos</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Tecnologias</h4>
+          <ul>
+            <li><a href="#">Google Places API</a></li>
+            <li><a href="#">OpenRouter LLMs</a></li>
+            <li><a href="#">Supabase Backend</a></li>
+            <li><a href="#">Vercel Cloud</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Termos de Uso</a></li>
+            <li><a href="#">Política de Privacidade</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Nuvuy. Todos os direitos reservados.</div>
+        <div>Layout Monocromático de Alta Performance.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main Script -->
+  <script src="script.js"></script>
+</body>
+</html>
