@@ -233,7 +233,7 @@ const sampleLeadsData = {
       script: "Olá equipe Bella Vita! Notei que vocês têm ótimas avaliações no Google Maps (4.8), porém o site de vocês não abre bem no celular. Tenho uma proposta para dobrar os agendamentos diretos pelo WhatsApp. Podemos conversar 5 min?"
     },
     {
-      nome: "Studio de Estética & Cílios Glow",
+      nome: "Studio de Estética e Cílios Glow",
       score: 68,
       temp: "warm",
       tempText: "Morno",
@@ -257,7 +257,7 @@ const sampleLeadsData = {
   ],
   restaurante: [
     {
-      nome: "Bistrô & Hamburgueria Ladrilho",
+      nome: "Bistrô e Hamburgueria Ladrilho",
       score: 91,
       temp: "hot",
       tempText: "Quente",
@@ -281,7 +281,7 @@ const sampleLeadsData = {
   ],
   academia: [
     {
-      nome: "Crossfit & Fitness Arena 360",
+      nome: "Crossfit e Fitness Arena 360",
       score: 95,
       temp: "hot",
       tempText: "Quente",
