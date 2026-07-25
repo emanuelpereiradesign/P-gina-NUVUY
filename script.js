@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFaqAccordion();
   initSmoothScroll();
   initStatsCounter();
-  initSplineWatermarkRemoverAndZoomBlocker();
+  initLazySplineViewer();
 });
 
 /* SVG Icon Constants */
@@ -28,6 +28,38 @@ const ICONS = {
   check: `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>`,
   sparkle: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg>`
 };
+
+/* Lazy Load Heavy Spline 3D Viewer (636 KiB) to Unblock FCP / LCP */
+function initLazySplineViewer() {
+  const container = document.querySelector('.spline-container') || document.querySelector('#recursos');
+  if (!container) return;
+
+  const loadSplineScript = () => {
+    if (document.querySelector('script[data-spline-script]')) return;
+    const script = document.createElement('script');
+    script.type = 'module';
+    script.src = 'https://unpkg.com/@splinetool/viewer@1.12.98/build/spline-viewer.js';
+    script.setAttribute('data-spline-script', 'true');
+    script.onload = () => {
+      initSplineWatermarkRemoverAndZoomBlocker();
+    };
+    document.head.appendChild(script);
+  };
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          loadSplineScript();
+          observer.disconnect();
+        }
+      });
+    }, { rootMargin: '400px 0px' });
+    observer.observe(container);
+  } else {
+    setTimeout(loadSplineScript, 2000);
+  }
+}
 
 /* Remove Watermark & Lock Wheel Zoom */
 function initSplineWatermarkRemoverAndZoomBlocker() {
