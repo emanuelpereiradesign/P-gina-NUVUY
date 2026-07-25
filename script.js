@@ -54,10 +54,8 @@ function initLazySplineViewer() {
           observer.disconnect();
         }
       });
-    }, { rootMargin: '400px 0px' });
+    }, { rootMargin: '100px 0px' });
     observer.observe(container);
-  } else {
-    setTimeout(loadSplineScript, 2000);
   }
 }
 
